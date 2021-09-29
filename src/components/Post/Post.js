@@ -14,7 +14,7 @@ const Post = (props) => {
             <Link to={ `/post/${id}`}>Post Details</Link>
             <br />
             <br />
-            <button onClick={handleClick}>Click to See Details !!</button>
+            <button onClick={handleClick}>Click Here to See Details !!</button>
         </div>
     );
 };
