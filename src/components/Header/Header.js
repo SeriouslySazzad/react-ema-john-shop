@@ -1,24 +1,18 @@
 import React from 'react';
-import './Header.css'
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
+    const activeStyle = {
+        fontWeight: "bold",
+        color: "red"
+    }
     return (
-        <div className='header-info'>
-            <div className="header">
-                <a href="/business" className="logo">Business Entrepreneurship</a>
-                <nav>
-                    <a href="/home">Home</a>
-                    <a href="/business">Businessman's Info</a>
-                    <a href="/about">About</a>
-                    <a href="/contact">Contact</a>
-                    <a href="/feedback">Feedback</a>
-                </nav>
-            </div>
-            <div className="header-details">
-                <h2>As you are reading this, you probably already have names popping into  your head as to who will appear on the richest list. Let’s find out.</h2>
-                <h1>Total Budget : 1000 Million</h1>
-            </div>
-        </div>
+        <nav>
+            <NavLink activeStyle={activeStyle} to="/home">Home</NavLink>
+            <NavLink activeStyle={activeStyle} to="/friends">Friends</NavLink>
+            <NavLink activeStyle={activeStyle} to="/about">About US</NavLink>
+            <NavLink activeStyle={activeStyle} to="/about/culture">Culture</NavLink>
+        </nav>
     );
 };
 
